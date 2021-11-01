@@ -41,11 +41,10 @@ jobs:
            sudo curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
            sudo bash nodesource_setup.sh
            sudo apt-get install nodejs
-           sudo apt -qq update && apt -qq upgrade -y && \
-           sudo apt -qq install -y --no-install-recommends ffmpeg neofetch
+           sudo apt -qq update && apt -qq upgrade -y
+           sudo apt -qq install -y ffmpeg neofetch
            sudo rm -rf /var/lib/apt/lists /var/cache/apt/archives /tmp/*
            cd /app/
-           sudo apt -qq install -y ffmpeg neofetch
            sudo pip3 install -U setuptools wheel && \
            sudo pip3 install --no-cache-dir -r requirements.txt
        - name: Running Friday
