@@ -42,7 +42,6 @@ jobs:
            sudo bash nodesource_setup.sh
            sudo apt-get install nodejs
            sudo apt-get install ffmpeg neofetch -y
-           sudo apt -qq update && apt -qq upgrade -y
            cd /app/
            sudo pip3 install -U setuptools wheel && \
            sudo pip3 install --no-cache-dir -r requirements.txt
